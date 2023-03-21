@@ -10,12 +10,13 @@ namespace UserRegistrationProblem
   internal class Pattern
     {
 
-        public static string Regex_Rule = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%_])[a-zA-Z0-9!@#$%_]{8,}$";
+        public static string Regex_Rule = "^(?=.*[A-Z])[a-zA-Z0-9!@#$%_]{8,}$";
 
         public bool validatePassword(string inputString)
         {
             return Regex.IsMatch(inputString, Regex_Rule);
         }
+
 
     }
 }
