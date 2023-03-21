@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             Pattern patterns = new Pattern();
-            if (patterns.validatePassword("Pooja2001"))
+            if (patterns.validatePassword("Chhaku@1813"))
             {
                 Console.WriteLine("Valid");
             }
@@ -13,7 +13,6 @@
             {
                 Console.WriteLine("Invalid");
             }
-
 
         }
     }
