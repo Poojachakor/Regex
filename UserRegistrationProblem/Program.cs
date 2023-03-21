@@ -6,8 +6,8 @@
         {
 
             Pattern pattern = new Pattern();
-            if (pattern.validatePinCode("Pooja"))//Valid name
-                                                   //if (pattern.validatePinCode("poojachakor"))//invalid name
+            if (pattern.validatePinCode("Chakor"))//Valid name
+                                                    //if (pattern.validatePinCode("chakor"))//invalid name
             {
                 Console.WriteLine("Valid");
             }
