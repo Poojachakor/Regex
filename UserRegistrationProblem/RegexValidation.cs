@@ -9,41 +9,38 @@ namespace UserRegistrationProblem
 {
     public class RegexValidation
     {
-        public static string FIRST_NAME_REGEX = "^[A-Z]{1}[A-Za-z]{3,}$";
-        public static string LAST_NAME_REGEX = "^[A-Z]{1}[A-Za-z]{3,}$";
-        public static string EMAIL_REGEX = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*[@][0-9a-zA-Z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
-        public static string MOBILE_REGEX = "^[0-9]{2}[ ][6-9]{1}[0-9]{9}$";
-        public static string PASSWORD_REGEX = "(?=.*?[._+-@#&*$])(?=.*[A-Z])(?=.*[0-9])([0-9a-zA-z]{7,})";
-        public bool ValidateFirstName()
+        public const string REGEX_FIRSTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public const string REGEX_LASTNAME = "^[A-Z]{1}[A-Za-z]{2,}$";
+        public const string REGEX_EMAIL = "^[0-9A-Za-z]+([._+-][0-9A-Za-z]+)*[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
+        public const string REGEX_MOBILENUMBER = "^[1-9]{1}[0-9]{0,3}\\s[1-9]{1}[0-9]{9}$";
+        //  \S matches any non-whitespace character
+        public const string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*\\d)(?=[\\w]*[\\W][\\w]*$)[\\S]{8,}$";
+        public bool ValidateFirstName(string firstName)
         {
-            Console.WriteLine("Enter first name: ");
-            string firstName = Console.ReadLine();
-            return Regex.IsMatch(firstName, FIRST_NAME_REGEX);
+            return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
         }
-        public bool ValidateLastName()
+        public bool ValidateLastName(string lastName)
         {
-            Console.WriteLine("Enter last name: ");
-            string lastName = Console.ReadLine();
-            return Regex.IsMatch(lastName, LAST_NAME_REGEX);
+            return Regex.IsMatch(lastName, REGEX_LASTNAME);
         }
         public bool ValidateEmail(string email)
         {
-            return Regex.IsMatch(email, EMAIL_REGEX);
+            return Regex.IsMatch(email, REGEX_EMAIL);
         }
-        public bool ValidateMobileNumber()
+        public bool ValidateMobile(string mobileNum)
         {
-            Console.WriteLine("Enter country code, then give space and then provide 10 digit mobile number: ");
-            string mobile = Console.ReadLine();
-            return Regex.IsMatch(mobile, MOBILE_REGEX);
+            return Regex.IsMatch(mobileNum, REGEX_MOBILENUMBER);
         }
-        public bool ValidatePassword()
+        public bool ValidatePassword(string password)
         {
-            Console.WriteLine("Enter your password");
-            string password = Console.ReadLine();
-            return Regex.IsMatch(password, PASSWORD_REGEX);
+            return Regex.IsMatch(password, REGEX_PASSWORD);
         }
     }
+
 }
+    
+
+
 
 
 
