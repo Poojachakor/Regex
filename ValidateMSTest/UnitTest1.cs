@@ -17,7 +17,7 @@ namespace ValidateMSTest
         [TestMethod]
         public void GivenUserFistName_WhenValidate_ShouldReturnTrue()
         {
-            string firstName = "Pooja";
+            string firstName = "Suraj";
             //Act
             bool result = user.ValidateFirstName(firstName);
             //Assert
@@ -26,7 +26,7 @@ namespace ValidateMSTest
         [TestMethod]
         public void GivenUserLastName_WhenValidate_ShouldReturnTrue()
         {
-            string lastName = "Chakor";
+            string lastName = "Sharma";
             //Act
             bool result = user.ValidateFirstName(lastName);
             //Assert
@@ -35,7 +35,7 @@ namespace ValidateMSTest
         [TestMethod]
         public void GivenEmailId_WhenValidate_ShouldReturnTrue()
         {
-            string email = "chakorpooja07@gmail.com";
+            string email = "surajsharma@gmail.com";
             //Act
             bool result = user.ValidateEmail(email);
             //Assert
@@ -44,7 +44,7 @@ namespace ValidateMSTest
         [TestMethod]
         public void GivenMobileNumber_WhenValidate_ShouldReturnTrue()
         {
-            string mobileNumber = "91 7040613418";
+            string mobileNumber = "91 8630539412";
             //Act
             bool result = user.ValidateMobile(mobileNumber);
             //Assert
@@ -55,7 +55,7 @@ namespace ValidateMSTest
         {
             //Arrange
 
-            string password = "Chhaku@2001";
+            string password = "Suraj$212";
             //Act
             bool result = user.ValidatePassword(password);
             //Assert
@@ -67,7 +67,7 @@ namespace ValidateMSTest
         {
             try
             {
-                string firstName = "pooja";
+                string firstName = "suraj";
                 bool result = user.ValidateFirstName(firstName);
             }
             catch (InvalidUserDetailException e)
@@ -80,7 +80,7 @@ namespace ValidateMSTest
         {
             try
             {
-                string lastName = "chakor";
+                string lastName = "sharma";
                 bool result = user.ValidateLastName(lastName);
             }
             catch (InvalidUserDetailException e)
@@ -93,7 +93,7 @@ namespace ValidateMSTest
         {
             try
             {
-                string email = "pooja.Chakor.com";
+                string email = "Sharma.suraj.com";
                 bool result = user.ValidateEmail(email);
             }
             catch (InvalidUserDetailException e)
@@ -106,7 +106,7 @@ namespace ValidateMSTest
         {
             try
             {
-                string mobileNumber = "91 0740613418";
+                string mobileNumber = "91 0876543210";
                 bool result = user.ValidateMobile(mobileNumber);
             }
             catch (InvalidUserDetailException e)
@@ -119,7 +119,7 @@ namespace ValidateMSTest
         {
             try
             {
-                string password = "chhaku@21";
+                string password = "suraj@123*";
                 bool result = user.ValidatePassword(password);
             }
             catch (InvalidUserDetailException e)

@@ -10,8 +10,8 @@ namespace UserRegistrationProblem
     {
         public enum ExceptionType
         {
-            INVALID_FIRSTNAME,
-            INVALID_LASTNAME,
+            INVALID_FIRST_NAME,
+            INVALID_LAST_NAME,
             INVALID_EMAIL,
             INVALID_PASSWORD,
             INVALID_MOBILE
@@ -22,5 +22,8 @@ namespace UserRegistrationProblem
             this.type = type;
         }
     }
+
 }
+
+
 

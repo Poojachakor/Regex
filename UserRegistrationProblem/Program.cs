@@ -22,8 +22,6 @@ namespace UserRegistrationProblem
             Console.WriteLine("Enter Your Password");
             string password = Console.ReadLine();
             Console.WriteLine(regexValidation.ValidatePassword(password));
-
-            //Validating Sample Emails
             List<string> sampleEmailList = new List<string>()
             {
                 "abc@yahoo.com",
@@ -51,13 +49,12 @@ namespace UserRegistrationProblem
     }
 }
 
-        
-    
 
 
-    
-
-    
 
 
-    
+
+
+
+
+
