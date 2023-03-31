@@ -36,9 +36,13 @@ namespace UserRegistrationProblem
             return Regex.IsMatch(password, REGEX_PASSWORD);
         }
     }
-
 }
-    
+
+
+
+
+
+
 
 
 

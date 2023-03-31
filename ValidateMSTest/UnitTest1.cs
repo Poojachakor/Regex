@@ -82,7 +82,7 @@ namespace ValidateMSTest
         [TestMethod]
         public void GivenEmailId_WhenValidate_ShouldReturnFalse()
         {
-            string email = "chakor.pooja.com";
+            string email = "Chakor.pooja.com";
             //Act
             bool result = user.ValidateEmail(email);
             //Assert
@@ -91,7 +91,7 @@ namespace ValidateMSTest
         [TestMethod]
         public void GivenMobileNumber_WhenValidate_ShouldReturnFalse()
         {
-            string mobileNumber = "91 0740613418";
+            string mobileNumber = "91 0740613481";
             //Act
             bool result = user.ValidateMobile(mobileNumber);
             //Assert
@@ -105,6 +105,20 @@ namespace ValidateMSTest
             bool result = user.ValidatePassword(password);
             //Assert
             Assert.IsFalse(result);
+        }
+        [TestMethod]
+        [DataRow("abc@yahoo.com")]
+        [DataRow("abc-100@yahoo.com")]
+        [DataRow("abc.100@yahoo.com")]
+        [DataRow("abc111@abc.com")]
+        [DataRow("abc.100@abc.com.au")]
+        [DataRow("abc-100@abc.net")]
+        [DataRow("abc@1.com")]
+        [DataRow("abc@gmail.com.com")]
+        [DataRow("abc+100@gmail.com")]
+        public void ValidateEmailId_Should_return_true(string email)
+        {
+            Assert.IsTrue(user.ValidateEmail(email));
         }
     }
 }
